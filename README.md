@@ -64,7 +64,7 @@ useless — is here:
 No PyPI dependency — clone and run:
 
 ```bash
-git clone https://github.com/<ricco020>/vpn-speed-tester
+git clone https://github.com/ricco020/vpn-speed-tester
 cd vpn-speed-tester
 python3 vpnspeed.py --version
 ```
