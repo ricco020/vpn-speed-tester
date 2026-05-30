@@ -64,7 +64,7 @@ useless — is here:
 No PyPI dependency — clone and run:
 
 ```bash
-git clone https://github.com/<your-org>/vpn-speed-tester
+git clone https://github.com/<ricco020>/vpn-speed-tester
 cd vpn-speed-tester
 python3 vpnspeed.py --version
 ```
@@ -170,8 +170,8 @@ The script is 270 lines, auditable in under 10 minutes.
 - [Throughput requirements per streaming service](https://www.anonymflow.com/en/blog/vpn-speed-test) — what's "good enough" for Netflix 4K, DAZN live, etc.
 - [95-session VPN streaming study](https://www.anonymflow.com/en/blog/study-vpn-streaming-2026-95-test-sessions) — the underlying dataset, downloadable CSV
 - [VPN security audit (9 tests)](https://www.anonymflow.com/en/blog/complete-vpn-security-audit) — broader check battery
-- [DNS leak detector CLI](https://github.com/your-org/dns-leak-detector-cli) — sister tool, DNS-side
-- [WebRTC leak detector](https://github.com/your-org/webrtc-leak-detector) — sister tool, browser-side
+- [DNS leak detector CLI](https://github.com/ricco020/dns-leak-detector-cli) — sister tool, DNS-side
+- [WebRTC leak detector](https://github.com/ricco020/webrtc-leak-detector) — sister tool, browser-side
 
 ## License
 
