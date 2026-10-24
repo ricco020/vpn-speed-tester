@@ -1,4 +1,4 @@
-# vpnspeed — VPN overhead benchmark CLI
+# vpnspeed, VPN overhead benchmark CLI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -11,7 +11,7 @@ forgotten.
 
 ```text
 ============================================================
- VPN SPEED TESTER — by AnonymFlow.com
+ VPN SPEED TESTER, by AnonymFlow.com
 ============================================================
 
                        Baseline            VPN
@@ -42,7 +42,7 @@ cherry-picked moment).
 
 This CLI does the boring honest thing:
 
-1. Measure your **real** connection with the VPN off — save it as
+1. Measure your **real** connection with the VPN off, save it as
    baseline.
 2. Turn the VPN on, measure again.
 3. Report download / upload / latency / jitter **deltas in percent**.
@@ -52,16 +52,16 @@ It's the same protocol the [95-session VPN streaming
 study](https://www.anonymflow.com/en/blog/study-vpn-streaming-2026-95-test-sessions)
 distilled to a single Python file you can run on a Raspberry Pi.
 
-The full write-up of the methodology — including why median+stdev are
+The full write-up of the methodology, including why median+stdev are
 the only honest numbers for VPN latency, why upload often suffers
 more than download on WireGuard, and why "test once at 9pm" is
-useless — is here:
+useless, is here:
 
-**[Real-world VPN speed test methodology — AnonymFlow](https://www.anonymflow.com/en/blog/real-world-vpn-speed-test)**
+**[Real-world VPN speed test methodology, AnonymFlow](https://www.anonymflow.com/en/blog/real-world-vpn-speed-test)**
 
 ## Install
 
-No PyPI dependency — clone and run:
+No PyPI dependency, clone and run:
 
 ```bash
 git clone https://github.com/ricco020/vpn-speed-tester
@@ -132,7 +132,7 @@ A `fail` verdict also returns exit code 1.
   Why HEAD: response body would dwarf round-trip time. Why median:
   it filters out the one spurious 250 ms outlier per run.
 - **Jitter** : standard deviation of the same 10 samples.
-  Stdev > median means your link is flapping — and a streaming
+  Stdev > median means your link is flapping, and a streaming
   player will notice before a benchmark does.
 - **Verdict** is built from a handful of hard-coded thresholds that
   mirror what the [95-session study](https://www.anonymflow.com/en/blog/study-vpn-streaming-2026-95-test-sessions)
@@ -153,7 +153,7 @@ The script is 270 lines, auditable in under 10 minutes.
 ## Limitations
 
 - Cloudflare's speed endpoint terminates at the Cloudflare edge
-  nearest to you — so your "download" measurement is the throughput
+  nearest to you, so your "download" measurement is the throughput
   *to that edge*, not to a Sydney CDN. For most VPN-overhead
   comparisons this is fine; for "is my VPN saturating the long
   haul?" it isn't.
@@ -166,17 +166,17 @@ The script is 270 lines, auditable in under 10 minutes.
 
 ## Companion resources
 
-- [Real-world VPN speed test methodology](https://www.anonymflow.com/en/blog/real-world-vpn-speed-test) — primary reference, methodology + per-VPN numbers
-- [Throughput requirements per streaming service](https://www.anonymflow.com/en/blog/vpn-speed-test) — what's "good enough" for Netflix 4K, DAZN live, etc.
-- [95-session VPN streaming study](https://www.anonymflow.com/en/blog/study-vpn-streaming-2026-95-test-sessions) — the underlying dataset, downloadable CSV
-- [VPN security audit (9 tests)](https://www.anonymflow.com/en/blog/complete-vpn-security-audit) — broader check battery
-- [DNS leak detector CLI](https://github.com/ricco020/dns-leak-detector-cli) — sister tool, DNS-side
-- [WebRTC leak detector](https://github.com/ricco020/webrtc-leak-detector) — sister tool, browser-side
+- [Real-world VPN speed test methodology](https://www.anonymflow.com/en/blog/real-world-vpn-speed-test), primary reference, methodology + per-VPN numbers
+- [Throughput requirements per streaming service](https://www.anonymflow.com/en/blog/vpn-speed-test), what's "good enough" for Netflix 4K, DAZN live, etc.
+- [95-session VPN streaming study](https://www.anonymflow.com/en/blog/study-vpn-streaming-2026-95-test-sessions), the underlying dataset, downloadable CSV
+- [VPN security audit (9 tests)](https://www.anonymflow.com/en/blog/complete-vpn-security-audit), broader check battery
+- [DNS leak detector CLI](https://github.com/ricco020/dns-leak-detector-cli), sister tool, DNS-side
+- [WebRTC leak detector](https://github.com/ricco020/webrtc-leak-detector), sister tool, browser-side
 
 ## License
 
-[MIT](LICENSE) — do whatever you want, including commercial use.
+[MIT](LICENSE), do whatever you want, including commercial use.
 
 ---
 
-*Built and maintained by the team behind [AnonymFlow](https://www.anonymflow.com) — independent VPN / privacy tooling and research. Full [methodology](https://www.anonymflow.com/en/methodology) and the [95-session VPN streaming study](https://www.anonymflow.com/en/blog/study-vpn-streaming-2026-95-test-sessions) for the reference data this CLI was distilled from.*
+*Built and maintained by the team behind [AnonymFlow](https://www.anonymflow.com), independent VPN / privacy tooling and research. Full [methodology](https://www.anonymflow.com/en/methodology) and the [95-session VPN streaming study](https://www.anonymflow.com/en/blog/study-vpn-streaming-2026-95-test-sessions) for the reference data this CLI was distilled from.*
